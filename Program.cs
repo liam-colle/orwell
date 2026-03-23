@@ -1,8 +1,8 @@
-using orwell;
+using orwell.src;
 
 var builder = Host.CreateApplicationBuilder(args);
-builder.Services.AddHttpClient<orwell.EndpointMonitorService>();
-builder.Services.AddHostedService<orwell.EndpointMonitorService>();
+builder.Services.AddHttpClient<EndpointMonitorService>();
+builder.Services.AddHostedService<EndpointMonitorService>();
 
 var host = builder.Build();
 host.Run();
